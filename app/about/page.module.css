@@ -1,0 +1,225 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--text-color);
+}
+
+/* Bio Section */
+.bioSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.bioContent h2 {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.bioContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.bioImage {
+  text-align: center;
+}
+
+.bioImage img {
+  border-radius: 0.5rem;
+}
+
+/* Experience Section */
+.experienceSection {
+  margin-bottom: 4rem;
+}
+
+.experienceSection h2 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px var(--border-color);
+}
+
+.timelineContent h3 {
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.duration {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Education Section */
+.educationSection {
+  margin-bottom: 4rem;
+}
+
+.educationSection h2 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.educationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.educationCard {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.educationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.educationCard h3 {
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.institution {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.year {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Technologies Section */
+.technologiesSection {
+  margin-bottom: 4rem;
+}
+
+.technologiesSection h2 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.techCategory {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.techCategory h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.techCategory ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.techCategory li {
+  color: var(--text-color);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.techCategory li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .bioSection {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timelineDot {
+    left: -8px;
+  }
+
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+}
